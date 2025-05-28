@@ -28,6 +28,7 @@ export default function Home() {
               clipPath: "polygon(70% 0, 700% 170%, 0% 80%)",
             }}
             alt="Gaming setup"
+            loading="eager"
           />
         </div>
       </section>
