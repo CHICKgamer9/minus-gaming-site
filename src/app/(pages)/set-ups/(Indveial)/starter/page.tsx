@@ -46,7 +46,7 @@ const ProductList = () => {
                             </div>
                             <div className="flex items-center">
                                 <p className="text-4xl">
-                                    Ikea Utespelare &nbsp;&nbsp;&nbsp;- &nbsp;
+                                    Ikea Utespelare 
                                 </p>
                                 <Image src={desk} alt="Monitor" className="w-35" />
                             </div>
