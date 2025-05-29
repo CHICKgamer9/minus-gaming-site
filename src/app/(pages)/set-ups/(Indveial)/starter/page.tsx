@@ -22,25 +22,25 @@ const ProductList = () => {
                         <div className="bg-gray-700 m-2 p-3 rounded-2xl">
                             <div className="flex items-center">
                                 <p className="text-4xl">
-                                    AOC 24G2SP, 24 Inches, 1080p, 165Hz and IPS &nbsp;&nbsp;&nbsp;-
+                                    AOC 24G2SP, 24 Inches, 1080p, 165Hz and IPS -
                                 </p>
                                 <Image src={monitor} alt="Monitor" className="w-35" />
                             </div>
                             <div className="flex items-center">
                                 <p className="text-4xl">
-                                    Logitech G203 Lightsync  &nbsp;&nbsp;&nbsp;-
+                                    Logitech G203 Lightsync  -
                                 </p>
                                 <Image src={mouse} alt="Monitor" className="w-35" />
                             </div>
                             <div className="flex items-center">
                                 <p className="text-4xl">
-                                    SteelSeries QcK Medium  &nbsp;&nbsp;&nbsp;- &nbsp;
+                                    SteelSeries QcK Medium  - 
                                 </p>
                                 <Image src={mousePad} alt="Monitor" className="w-35" />
                             </div>
                             <div className="flex items-center">
                                 <p className="text-4xl">
-                                    Redragon K552 Kumara  &nbsp;&nbsp;&nbsp;- &nbsp;
+                                    Redragon K552 Kumara  - 
                                 </p>
                                 <Image src={keyboard} alt="Monitor" className="w-35" />
                             </div>
