@@ -46,13 +46,13 @@ const ProductList = () => {
                             </div>
                             <div className="flex items-center">
                                 <p className="text-4xl">
-                                    Ikea Utespelare 
+                                    Ikea Utespelare -
                                 </p>
                                 <Image src={desk} alt="Monitor" className="w-35" />
                             </div>
                             <div className="flex items-center">
                                 <p className="text-4xl">
-                                    Gaming Chair &nbsp;&nbsp;&nbsp;- &nbsp;
+                                    Gaming Chair -
                                 </p>
                                 <Image src={chair} alt="Monitor" className="w-35" />
                             </div>
