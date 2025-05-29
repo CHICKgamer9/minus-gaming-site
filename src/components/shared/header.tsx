@@ -25,7 +25,7 @@ const Header = () => {
             <Menu />
             <div className="gap-5 lg:gap-20 flex max-md:hidden">
                 <Button className="bg-white text-black font-extrabold hover:scale-150 text-3xl">
-                    <Link href="/pcs">Pc's</Link>
+                    <Link href="/pcs">Pc&apos;s</Link>
                 </Button>
                 <Button className="bg-white text-black font-extrabold hover:scale-150  text-3xl">
                     <Link href="/parts">Parts</Link>
