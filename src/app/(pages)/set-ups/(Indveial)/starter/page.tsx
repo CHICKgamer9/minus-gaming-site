@@ -22,7 +22,7 @@ const ProductList = () => {
                         <div className="bg-gray-700 m-2 p-3 rounded-2xl">
                             <div className="flex items-center">
                                 <p className="text-4xl">
-                                    AOC 24G2SP 24" 1080p 165Hz IPS &nbsp;&nbsp;&nbsp;-
+                                    AOC 24G2SP, 24 Inches, 1080p, 165Hz and IPS &nbsp;&nbsp;&nbsp;-
                                 </p>
                                 <Image src={monitor} alt="Monitor" className="w-35" />
                             </div>
