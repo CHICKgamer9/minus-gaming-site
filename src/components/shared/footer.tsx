@@ -51,14 +51,14 @@ const Footer = () => {
         <div className="flex flex-col text-left">
           <h2 className="text-lg font-semibold underline underline-offset-4 mb-2">Follow Us:</h2>
           <div className="flex gap-4">
-            <Link href="https://youtube.com" aria-label="YouTube">
+            <Link href="https://www.youtube.com/@OfficialMinusGaming" target="_blank" aria-label="YouTube">
               <Image
                 src={yt_logo}
                 alt="YouTube Logo"
                 className="w-6 h-6 brightness-0 invert"
               />
             </Link>
-            <Link href="https://twitter.com" aria-label="X (Twitter)">
+            <Link href="https://x.com/properMinus" aria-label="X (Twitter) " target="_blank">
               <Image
                 src={x_logo}
                 alt="Twitter Logo"

@@ -25,7 +25,7 @@ const Header = () => {
             <Menu />
             <div className="gap-5 lg:gap-20 flex max-md:hidden">
                 <Button className="bg-white text-black font-extrabold hover:scale-150 text-3xl">
-                    <Link href="/pcs">Pc&apos;s</Link>
+                    <Link href="/pcs">PCs</Link>
                 </Button>
                 <Button className="bg-white text-black font-extrabold hover:scale-150  text-3xl">
                     <Link href="/parts">Parts</Link>
@@ -34,7 +34,7 @@ const Header = () => {
                     <Link href="/contact">Contact</Link>
                 </Button>
                 <Button className="bg-white text-black font-extrabold hover:scale-150  text-3xl">
-                    <Link href="/set-ups">Set Ups</Link>
+                    <Link href="/set-ups">Setups</Link>
                 </Button>
                 <div className="hidden md:flex justify-center items-center md:gap-1 lg:gap-4">
                     <Link href="/cart">
