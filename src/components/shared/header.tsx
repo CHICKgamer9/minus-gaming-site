@@ -29,7 +29,6 @@ const playfair = Playfair_Display({
 const Header = () => {
     const [header, setHeader] = useState(false)
 
-
     useEffect(() => {
         const scrollHeader = () => {
             if(window.scrollY >= 20) {

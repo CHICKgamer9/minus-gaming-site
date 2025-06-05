@@ -26,6 +26,8 @@ export default function Home() {
     <div className="">
       <section className="flex flex-col-reverse max-md:h-[60vh] md:flex-row w-full justify-between  p-6 max-md:px-0 max-md:pb-5 max-md:text-center not-dark: bg-[var(--background)]">
         <div className="flex flex-col justify-center items-start text-left md:w-1/2 max-md:px-2 max-md:items-center ">
+          
+          
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold max-md:px-10 text-[var(--text)] pt-10 md:pt-0">
             Minus Gaming
           </h1>
