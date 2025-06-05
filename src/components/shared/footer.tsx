@@ -8,7 +8,7 @@ import logo from "@/../public/assets/logo.jpg";
 
 const Footer = () => {
   return (
-    <footer className="bg-[var(--footer)] text-[var(--text)] pt-20 px-6 pb-10">
+    <footer className="bg-[var(--footer)] text-[var(--text)] pt-20 px-6 pb-10 ">
       <div className="flex flex-col md:flex-row flex-wrap gap-8 justify-between items-start max-w-7xl mx-auto">
         {/* Logo Section */}
         <div className="flex flex-col items-start">
@@ -17,6 +17,7 @@ const Footer = () => {
             src={logo}
             alt="Minus Gaming Logo"
             className="w-32 rounded-2xl"
+            loading="lazy"
           />
         </div>
 
@@ -55,14 +56,16 @@ const Footer = () => {
               <Image
                 src={yt_logo}
                 alt="YouTube Logo"
-                className="w-6 h-6 brightness-0 invert"
+                className="w-6 h-6 dark-img"
+                loading="lazy"
               />
             </Link>
             <Link href="https://x.com/properMinus" aria-label="X (Twitter) " target="_blank">
               <Image
                 src={x_logo}
                 alt="Twitter Logo"
-                className="w-6 h-6 brightness-0 invert"
+                className="w-6 h-6 dark-img"
+                loading="lazy"
               />
             </Link>
           </div>

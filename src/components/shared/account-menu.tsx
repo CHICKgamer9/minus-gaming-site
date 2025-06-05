@@ -28,7 +28,7 @@ const Menu = () => {
     return (
         <div className="">
             <div className="flex gap-2 items-center">
-                <Image src={account} alt="Menu icon" width={35} height={35} className="dark-img" onClick={handleProfile}/>
+                <Image src={account} alt="Menu icon" width={35} height={35} className="dark-img" onClick={handleProfile} loading="eager"/>
             </div>
                 {
                     open && (

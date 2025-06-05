@@ -85,7 +85,7 @@ const Header = () => {
                 </div>
                 <div className="hidden md:flex justify-center items-center md:gap-1 lg:gap-4">
                     <Link href="/cart">
-                        <Image src={cart} alt="cart icon" width={35} height={35} className="dark-img"/>
+                        <Image src={cart} alt="cart icon" width={35} height={35} className="dark-img" loading="eager"/>
                     </Link>
                     <Account  />
                 </div>
