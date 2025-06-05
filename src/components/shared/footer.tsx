@@ -8,7 +8,7 @@ import logo from "@/../public/assets/logo.jpg";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white pt-20 px-6 pb-10">
+    <footer className="bg-[var(--footer)] text-[var(--text)] pt-20 px-6 pb-10">
       <div className="flex flex-col md:flex-row flex-wrap gap-8 justify-between items-start max-w-7xl mx-auto">
         {/* Logo Section */}
         <div className="flex flex-col items-start">

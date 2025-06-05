@@ -4,6 +4,7 @@
   --background: #fff;
   --dark-background: #171717;
   --header: #C7ECF7;
+  --footer: #C7ECF7;
   --header-scrolled: #78d2eb69;
   --shadow: #00000090;
   --text: #000;
@@ -15,6 +16,7 @@
 .dark {
   --background: #6d6d6d;
   --dark-background: #171717;
+  --footer: #000fb08a;
   --text: #fff;
   --header: #323A91;
   --header-scrolled: #000fb08a;
