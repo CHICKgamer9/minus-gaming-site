@@ -29,23 +29,24 @@ const playfair = Playfair_Display({
 const Header = () => {
     const [header, setHeader] = useState(false)
 
-    const scrollHeader = () =>{
-        if(window.scrollY >= 20) {
-            setHeader(true)
-            console.log(header);
-        } else {
-            setHeader(false)
-            console.log(header);
-        }
-    }
 
     useEffect(() => {
-        window.addEventListener('scroll',scrollHeader)
+        const scrollHeader = () => {
+            if(window.scrollY >= 20) {
+                setHeader(true)
+                console.log(header);
+            } else {
+                setHeader(false)
+                console.log(header);
+            }
+        };
 
-        return ()=>{
-            window.addEventListener('scroll',scrollHeader)
-        }
-    }, [])
+        window.addEventListener('scroll', scrollHeader);
+
+        return () => {
+            window.removeEventListener('scroll', scrollHeader);
+        };
+    }, [header]);
 
 
     return (
