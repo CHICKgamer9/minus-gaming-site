@@ -18,13 +18,13 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="mb-3">
-      <section className="flex flex-col-reverse max-md:h-[60vh] md:flex-row w-full justify-between  p-6 max-md:p-0  bg-gray-700">
+      <section className="flex flex-col-reverse max-md:h-[60vh] md:flex-row w-full justify-between  p-6 max-md:p-0 not-dark: bg-[var(--background)]">
         <div className="flex flex-col justify-center items-start text-left md:w-1/2 sm:items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold max-md:px-10 text-white pt-10 md:pt-0">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold max-md:px-10 text-[var(--text)] pt-10 md:pt-0">
             Minus Gaming
           </h1>
 
-          <p className="text-purple-300 text-lg sm:text-xl md:text-2xl max-md:px-10 mt-6">
+          <p className="text-[var(--purpel-text)] text-lg sm:text-xl md:text-2xl max-md:px-10 mt-6">
             Plug & Play Custom Gaming Setups Delivered to Your Door.
           </p>
 

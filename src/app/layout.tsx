@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-//comonets
+// Components
 import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
+import { Providers } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 
 export const metadata: Metadata = {
   title: "Minus Gaming",
@@ -27,19 +29,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}`}
+
       >
-        <header>
-          <Header/>
-        </header>
-        <main>
-          {children}
-        </main>
-        <footer>
-          <Footer/>
-        </footer>
+        <Providers>
+            <Header />
+          <main>{children}</main>
+          <footer>
+            <Footer />
+          </footer>
+        </Providers>
       </body>
     </html>
   );
