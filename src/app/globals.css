@@ -14,8 +14,8 @@
 .dark {
   --background: #6d6d6d;
   --text: #fff;
-  --header: #1C3066;
-  --header-scrolled: #3f6be572;
+  --header: #323A91;
+  --header-scrolled: #000fb08a;
   --shadow: #b1b1b16a;
   --second: #1b2866;
   --img-filter: brightness(100%) invert(100%);
