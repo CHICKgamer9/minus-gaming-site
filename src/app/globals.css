@@ -2,6 +2,7 @@
 
 :root {
   --background: #fff;
+  --dark-background: #171717;
   --header: #C7ECF7;
   --header-scrolled: #78d2eb69;
   --shadow: #00000090;
@@ -13,6 +14,7 @@
 
 .dark {
   --background: #6d6d6d;
+  --dark-background: #171717;
   --text: #fff;
   --header: #323A91;
   --header-scrolled: #000fb08a;
@@ -25,6 +27,21 @@
 
 
 @layer utilities {
+  .fade-in {
+    animation: fadeIn 0.7s ease forwards;
+    opacity: 0; /* Start hidden */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
   .dark-img {
     filter: var(--img-filter);
     cursor: pointer;
