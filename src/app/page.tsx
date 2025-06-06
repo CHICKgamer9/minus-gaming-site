@@ -3,7 +3,6 @@ import Image from "next/image";
 // shadcn UI
 import { Button } from "@/components/ui/button";
 
-
 // images
 import hero_img from "../../public/img/home-page-hero-img.png";
 
@@ -12,14 +11,15 @@ import { LuMousePointerClick } from "react-icons/lu";
 import { BsFillBoxSeamFill } from "react-icons/bs";
 import { SlGameController } from "react-icons/sl";
 
+export const dynamic = "force-dynamic";
+
+
 //components
 import FadeInOnView from "@/components/shared/small/fade-in";
-import { Suspense} from "react";
 import ProductList from "../components/shared/cards/ProductList";
 
-const Home = async () => {
+const Home = () => {
 
-  
   return (
     <div className="">
       <section className="flex flex-col-reverse max-md:h-[60vh] md:flex-row w-full justify-between  p-6 max-md:px-0 max-md:pb-5 max-md:text-center not-dark: bg-[var(--background)]">
@@ -83,9 +83,7 @@ const Home = async () => {
       </div>
       <div className="mt-24">
         <h2 className="text-center text-4xl font-bold py-5">Fetured Products</h2>
-        <Suspense fallback={"loading"}>
           <ProductList categoryId={process.env.FEATURED_CATEGORY_ID ?? ""} limit={4}/>
-        </Suspense>
       </div>
     </div>
   );
