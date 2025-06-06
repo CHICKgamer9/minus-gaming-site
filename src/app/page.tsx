@@ -6,12 +6,6 @@ import { Button } from "@/components/ui/button";
 
 // images
 import hero_img from "../../public/img/home-page-hero-img.png";
-// import case_5090 from "@/../public/img/pc/5090-pc-case.jpg"
-// import case_esports from "@/../public/img/pc/esorpts-pc-case.jpg"
-// import razerMic from "@/../public/img/mics/razer-mic.jpg"
-// import basicSetUp from "@/../public/img/setups/Basic setup.jpg"
-// import customSetUp from "@/../public/img/setups/custom-setup.jpg"
-// import Link from "next/link";
 
 //icons
 import { LuMousePointerClick } from "react-icons/lu";
@@ -20,8 +14,12 @@ import { SlGameController } from "react-icons/sl";
 
 //components
 import FadeInOnView from "@/components/shared/small/fade-in";
+import { Suspense} from "react";
+import ProductList from "../components/shared/cards/ProductList";
 
-export default function Home() {
+const Home = async () => {
+
+  
   return (
     <div className="">
       <section className="flex flex-col-reverse max-md:h-[60vh] md:flex-row w-full justify-between  p-6 max-md:px-0 max-md:pb-5 max-md:text-center not-dark: bg-[var(--background)]">
@@ -83,6 +81,14 @@ export default function Home() {
           <p>You game instantly</p>
         </div>
       </div>
+      <div className="mt-24">
+        <h2 className="text-center text-4xl font-bold py-5">Fetured Products</h2>
+        <Suspense fallback={"loading"}>
+          <ProductList categoryId={process.env.FEATURED_CATAGORIY_ID ?? ""} limit={4}/>
+        </Suspense>
+      </div>
     </div>
   );
 }
+
+export default Home;

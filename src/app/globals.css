@@ -43,7 +43,6 @@
     }
   }
 
-
   .dark-img {
     filter: var(--img-filter);
     cursor: pointer;

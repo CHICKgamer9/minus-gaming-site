@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
 import { Providers } from "./providers";
+import { WixClientContextProvider } from "@/context/wixContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,13 +35,15 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}`}
 
       >
-        <Providers>
-            <Header />
-          <main>{children}</main>
-          <footer>
-            <Footer />
-          </footer>
-        </Providers>
+        <WixClientContextProvider>
+          <Providers>
+              <Header />
+            <main>{children}</main>
+            <footer>
+              <Footer />
+            </footer>
+          </Providers>
+        </WixClientContextProvider>
       </body>
     </html>
   );
