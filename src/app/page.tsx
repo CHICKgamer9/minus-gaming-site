@@ -84,7 +84,7 @@ const Home = async () => {
       <div className="mt-24">
         <h2 className="text-center text-4xl font-bold py-5">Fetured Products</h2>
         <Suspense fallback={"loading"}>
-          <ProductList categoryId={process.env.FEATURED_CATAGORIY_ID ?? ""} limit={4}/>
+          <ProductList categoryId={process.env.FEATURED_CATEGORY_ID ?? ""} limit={4}/>
         </Suspense>
       </div>
     </div>
