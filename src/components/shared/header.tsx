@@ -36,7 +36,6 @@ const Header = () => {
                 console.log(header);
             } else {
                 setHeader(false)
-                console.log(header);
             }
         };
 

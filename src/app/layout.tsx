@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import dynamic from 'next/dynamic';
 
 // Components
 import Footer from "@/components/shared/footer";
 import { Providers } from "./providers";
 import { WixClientContextProvider } from "@/context/wixContext";
+import HeaderWrapper from "@/components/shared/other/header-wrapper"; // ✅ NEW
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,12 +17,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
- 
-const DynamicComponentWithNoSSR = dynamic(
-  () => import('@/components/shared/header'),
-  { ssr: false }
-)
-
 
 export const metadata: Metadata = {
   title: "Minus Gaming",
@@ -36,13 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
-
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <WixClientContextProvider>
           <Providers>
-              <DynamicComponentWithNoSSR />
+            <HeaderWrapper /> {/* ✅ FIXED */}
             <main>{children}</main>
             <footer>
               <Footer />
