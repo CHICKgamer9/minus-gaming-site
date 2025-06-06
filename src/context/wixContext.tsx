@@ -1,39 +1,49 @@
 'use client'
 
-import { createClient, OAuthStrategy } from "@wix/sdk";
-import {products, collections} from "@wix/stores"
-import Cookies from "js-cookie"
-import { ReactNode } from "react";
-import { createContext } from "react";
+import { useState, useEffect, createContext, ReactNode } from "react";
+import { createClient, OAuthStrategy, TokenRole, RefreshToken, WixClient } from "@wix/sdk";
+import { products, collections } from "@wix/stores";
+import Cookies from "js-cookie";
 
+export const WixClientReactContext = createContext<WixClient | null>(null);
 
-const refreshToken = JSON.parse(Cookies.get("refreshToken") || "{}")
+export const WixClientContextProvider = ({ children }: { children: ReactNode }) => {
+  const [wixClient, setWixClient] = useState<WixClient | null>(null);
 
-const wixClient = createClient({
-  modules: {
-    products,
-    collections,
-  },
-  auth: OAuthStrategy({
-    clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID!,
-    tokens: {
-      refreshToken, accessToken:{value:"", expiresAt: 0}
-    },
-  }),
-});
+  useEffect(() => {
+    const refreshTokenValue = Cookies.get("refreshToken");
+    if (!refreshTokenValue) {
+      console.warn("No refresh token found, Wix client not created");
+      setWixClient(null);
+      return;
+    }
 
-export type WixClient = typeof wixClient
+    const refreshToken: RefreshToken = {
+      value: refreshTokenValue,
+      role: TokenRole.NONE,
+    };
 
-export const WixClientContext = createContext<WixClient>(wixClient)
+    try {
+      const client = createClient({
+        modules: { products, collections },
+        auth: OAuthStrategy({
+          clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID ?? "",
+          tokens: {
+            refreshToken,
+            accessToken: { value: "", expiresAt: 0 },
+          },
+        }),
+      });
+      setWixClient(client);
+    } catch (error) {
+      console.error("Error creating Wix client:", error);
+      setWixClient(null);
+    }
+  }, []);
 
-export const WixClientContextProvider =({
-    children,
-}:{
-    children: ReactNode;
-})=>{
-    return (
-       <WixClientContext.Provider value={wixClient}>
-        {children}
-       </WixClientContext.Provider>
-    )
-}
+  return (
+    <WixClientReactContext.Provider value={wixClient}>
+      {children}
+    </WixClientReactContext.Provider>
+  );
+};
