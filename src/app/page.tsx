@@ -21,7 +21,7 @@ import ProductList from "../components/shared/cards/ProductList";
 const Home = () => {
 
   return (
-    <div className="">
+    <div className=" overflow-x-hidden">
       <section className="flex flex-col-reverse max-md:h-[60vh] md:flex-row w-full justify-between  p-6 max-md:px-0 max-md:pb-5 max-md:text-center not-dark: bg-[var(--background)]">
         <div className="flex flex-col justify-center items-start text-left md:w-1/2 max-md:px-2 max-md:items-center ">
           
@@ -42,7 +42,7 @@ const Home = () => {
           </Button>
         </div>
 
-        <div className="relative w-full md:w-1/2 mb-6 md:mb-0 sm:m-0">
+        <div className="w-full md:w-1/2 mb-6 md:mb-0 sm:m-0 max-md:z-10">
           <Image
             src={hero_img}
             alt="Gaming setup"

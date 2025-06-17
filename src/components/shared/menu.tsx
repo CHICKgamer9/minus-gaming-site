@@ -23,11 +23,13 @@ const Menu = () => {
             </div>
                 {
                     open && (
-                        <div className="absolute bg-black left-0 top-20 w-full h-[calc(100vh-80px)] z-40 flex flex-col justify-center gap-8 text-center text-5xl">
+                        <div className="absolute bg-[var(--background)] left-0 top-20 w-full h-[calc(100vh-80px)] z-50 flex flex-col justify-center gap-8 text-center text-5xl">
                             <Link href="/">Home</Link>
-                            <Link href="/pre-build">Pre Builds</Link>
+                            <Link href="/pre-build">PCs</Link>
                             <Link href="/parts">Parts</Link>
                             <Link href="/contact">Contact</Link>
+                            <Link href="/set-ups">Setups</Link>
+
                         </div>
                     )
                 }

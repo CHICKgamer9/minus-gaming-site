@@ -53,7 +53,7 @@ const Header = () => {
             "sticky top-0 z-100 bg-[var(--header-scrolled)] flex items-center justify-between gap-10 p-3 border-b-double border-b-[var(--second)] border-b-8 h-20 w-full backdrop-blur-lg font-[var(--font-playfair)]" 
                 : 
             //normel
-            "sticky bg-[var(--header)] flex items-center justify-between gap-10 p-3 border-b-double border-b-[var(--second)] border-b-8 h-20 w-full backdrop-blur-lg font-[var(--font-playfair)]"
+            "sticky bg-[var(--header)] flex items-center z-100 justify-between gap-10 p-3 border-b-double border-b-[var(--second)] border-b-8 h-20 w-full backdrop-blur-lg font-[var(--font-playfair)]"
         }>
 
             <div className="flex items-center gap-4 md:pr-4">
