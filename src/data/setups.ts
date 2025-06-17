@@ -9,7 +9,7 @@ export const StarterSetupComponents = [
   {
     title: "Keyboard",
     img_alt: "Redragon K552 Kumara",
-    dis: "Custom TKL, Red Switches",
+    dis: "Redragon K552 Kumara",
     image: "/img/setups/starter/starter-keyboard.png",
     editable: true,
   },
@@ -46,6 +46,57 @@ export const StarterSetupComponents = [
     img_alt: "Ikea Utespelare",
     dis: "Ikea Utespelare",
     image: "/img/setups/starter/starter-desk.png",
+    editable: false,
+  },
+];
+export const ProSetupComponents = [
+  {
+    title: "PC",
+    img_alt: "Pc with RGB",
+    dis: "Ryzen 7 7800X3D,  AMD RX 7900 XTX, 32GB RAM",
+    image: "/img/setups/starter/starter-pc.jpg",
+    editable: true,
+  },
+  {
+    title: "Keyboard",
+    img_alt: "Keychron Q1 Pro",
+    dis: "Keychron Q1 Pro",
+    image: "/img/setups/pro/pro-keybord.webp",
+    editable: true,
+  },
+  {
+    title: "Mouse",
+    img_alt: "A wired mouse with rgb lighting",
+    dis: "Logitech G Pro X Superlight 2",
+    image: "/img/setups/pro/pro-mouse.jpg",
+    editable: true,
+  },
+  {
+    title: "Mouse Mat",
+    img_alt: "A a black mouse pad with the steel sires logo on it",
+    dis: "Logitech G840 XL",
+    image: "/img/setups/pro/pro-mouse-mat.jpg",
+    editable: true,
+  },
+  {
+    title: "Monitor",
+    img_alt: "Gamming Monitor",
+    dis: "Samsung Odyssey G8, OLED, 34\", 4K and 240Hz",
+    image: "/img/setups/pro/pro-monitro.avif",
+    editable: true,
+  },
+  {
+    title: "Chair",
+    img_alt: "Gaming Chair",
+    dis: "Secretlab Titan Evo 2025 Series",
+    image: "/img/setups/pro/pro-chair.png",
+    editable: false,
+  },
+  {
+    title: "Desk",
+    img_alt: "Secretlab Magnus Pro XL",
+    dis: "Secretlab Magnus Pro XL",
+    image: "/img/setups/pro/pro-desk.png",
     editable: false,
   },
 ];
