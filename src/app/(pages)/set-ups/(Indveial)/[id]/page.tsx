@@ -20,7 +20,7 @@ const ProductList = () => {
     
     return (
         <div className="p-6 max-w-6xl mx-auto">
-            <h1 className="text-3xl font-bold mb-4">{id}</h1>
+            <h1 className="text-3xl font-bold mb-4">{id} Set Up</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {currentSetupComponents.map((component, index) => (
                 <ComponentCard 
