@@ -1,4 +1,4 @@
-export const biginerSetupComponents = [
+export const StarterSetupComponents = [
   {
     title: "PC",
     img_alt: "Pc with RGB",
