@@ -10,7 +10,9 @@
   --text: #000;
   --second: #2A387F;
   --img-filter: brightness(100%) invert(0%);
-  --purpel-text: #D202C8
+  --purpel-text: #D202C8;
+  --form-bg: #a6d2e3;
+  --textarea-bg: #4a7d91;
 }
 
 .dark {
@@ -24,6 +26,8 @@
   --second: #1b2866;
   --img-filter: brightness(100%) invert(100%);
   --purpel-text: #e19cff;
+  --form-bg: #1b2866;
+  --textarea-bg: #070e33;
 }
 
 
